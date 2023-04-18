@@ -5,7 +5,7 @@ from pyb import LED      # 用于指示程序运行状态
 from pid import PID      #导入PID模块
 from pyb import UART     #导入串口模块
 uart = UART(3, 19200)    #初始化串口3，波特率为19200
-
+uart.init(19200，8，0，1)#串口初始化
 
 rho_pid = PID(p=0.4, i=0)  #rho代表距离，theta代表角度
 theta_pid = PID(p=0.001, i=0)
